@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/epigraph
+# catalog-date 2009-09-02 18:09:14 +0200
+# catalog-license lppl1.3
+# catalog-version 1.5c
 Name:		texlive-epigraph
 Version:	1.5c
 Release:	1
@@ -44,6 +50,7 @@ are catered for. Various aspects are easily configurable.
 #- source
 %doc %{_texmfdistdir}/source/latex/epigraph/epigraph.dtx
 %doc %{_texmfdistdir}/source/latex/epigraph/epigraph.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ are catered for. Various aspects are easily configurable.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
