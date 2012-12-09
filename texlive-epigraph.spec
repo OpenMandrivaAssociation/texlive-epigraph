@@ -50,3 +50,17 @@ are catered for. Various aspects are easily configurable.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5c-2
++ Revision: 751493
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.5c-1
++ Revision: 718344
+- texlive-epigraph
+- texlive-epigraph
+- texlive-epigraph
+- texlive-epigraph
+
