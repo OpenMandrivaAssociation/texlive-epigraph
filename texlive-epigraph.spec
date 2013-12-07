@@ -6,7 +6,7 @@
 # catalog-version 1.5c
 Name:		texlive-epigraph
 Version:	1.5c
-Release:	2
+Release:	3
 Summary:	A package for typesetting epigraphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/epigraph
