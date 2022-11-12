@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/epigraph
-# catalog-date 2009-09-02 18:09:14 +0200
-# catalog-license lppl1.3
-# catalog-version 1.5c
 Name:		texlive-epigraph
-Version:	1.5c
-Release:	11
+Version:	54857
+Release:	1
 Summary:	A package for typesetting epigraphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/epigraph
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,42 +19,27 @@ end) of a chapter. Both single epigraphs and lists of epigraphs
 are catered for. Various aspects are easily configurable.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/epigraph/epigraph.sty
-%doc %{_texmfdistdir}/doc/latex/epigraph/README
-%doc %{_texmfdistdir}/doc/latex/epigraph/epigraph.pdf
+%{_texmfdistdir}/tex/latex/epigraph
+%doc %{_texmfdistdir}/doc/latex/epigraph
 #- source
-%doc %{_texmfdistdir}/source/latex/epigraph/epigraph.dtx
-%doc %{_texmfdistdir}/source/latex/epigraph/epigraph.ins
+%doc %{_texmfdistdir}/source/latex/epigraph
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5c-2
-+ Revision: 751493
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.5c-1
-+ Revision: 718344
-- texlive-epigraph
-- texlive-epigraph
-- texlive-epigraph
-- texlive-epigraph
-
