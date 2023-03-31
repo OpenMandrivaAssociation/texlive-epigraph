@@ -1,6 +1,6 @@
 Name:		texlive-epigraph
 Version:	54857
-Release:	1
+Release:	2
 Summary:	A package for typesetting epigraphs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/epigraph
