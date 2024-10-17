@@ -3,7 +3,7 @@ Version:	54857
 Release:	2
 Summary:	A package for typesetting epigraphs
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/epigraph
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/epigraph
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/epigraph.doc.r%{version}.tar.xz
